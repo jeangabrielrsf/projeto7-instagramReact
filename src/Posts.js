@@ -31,7 +31,7 @@ function Post (props) {
                 <div class="curtidas">
                     <img src={props.likeImg} />
                     <div class="texto">
-                        {props.likeText}
+                        Curtido por <strong>{props.likeUser}</strong> e <strong>outras {props.likeNumber} pessoas</strong>
                     </div>
                 </div>
             </div>
@@ -47,14 +47,17 @@ function Posts () {
                 user="meowed"
                 postContent="assets/img/gato-telefone.svg"
                 likeImg="assets/img/respondeai.svg"
-                likeText="Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>"
+                likeUser="respondeai"
+                likeNumber="101.523"
+               
                 />
             <Post 
                 userImg="assets/img/barked.svg"
                 user="barked"
                 postContent="assets/img/dog.svg"
                 likeImg="assets/img/adorable_animals.svg"
-                likeText="Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>"
+                likeUser="adorable_animals"
+                likeNumber="99.159"
             />
         </div>
  
