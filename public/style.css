@@ -391,3 +391,14 @@ body {
     top: 4px;
   }
 }
+
+
+.fundo .acoes .vermelho {
+  color: red;
+  visibility: visible;
+}
+
+.fundo .acoes .preto {
+  color: black;
+  visibility: visible;
+}

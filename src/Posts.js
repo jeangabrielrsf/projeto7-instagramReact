@@ -1,5 +1,10 @@
+import React from "react";
+
 
 function Post (props) {
+
+    const [formaBotao, setFormaBotao] = React.useState("heart-outline");
+    const [corBotao, setCorBotao] = React.useState("preto");
     return (
         <div class="post">
             <div class="topo">
@@ -19,7 +24,18 @@ function Post (props) {
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name={formaBotao} class={corBotao}
+                            onClick={() => {
+                                if (formaBotao != "heart"){
+                                    setFormaBotao("heart");
+                                    setCorBotao("vermelho");
+                                } else {
+                                    setFormaBotao("heart-outline");
+                                    setCorBotao("preto");
+                                }
+                                
+                            }}
+                        ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
