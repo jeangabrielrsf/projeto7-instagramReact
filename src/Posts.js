@@ -18,7 +18,12 @@ function Post (props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.postContent} />
+                <img src={props.postContent} onDoubleClick={() => {
+                    if (formaBotao != "heart") {
+                        setFormaBotao("heart");
+                        setCorBotao("vermelho");
+                    }
+                }} />
             </div>
 
             <div class="fundo">
